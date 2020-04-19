@@ -1,27 +1,25 @@
-name: 'TODO: Run <linter-name> with reviewdog'
-description: 'TODO: 🐶 Run <linter-name> with reviewdog on pull requests to improve code review experience.'
-author: 'TODO: <your-name>'
+name: 'Run xo with reviewdog'
+description: '🐶 Run xo with reviewdog on pull requests to improve code review experience.'
+author: 'omsmith'
 inputs:
   github_token:
-    description: 'GITHUB_TOKEN'
-    default: '${{ github.token }}'
-  ### Flags for reviewdog ###
+    description: 'GITHUB_TOKEN.'
+    required: true
   level:
     description: 'Report level for reviewdog [info,warning,error]'
     default: 'error'
   reporter:
-    description: 'Reporter of reviewdog command [github-pr-check,github-pr-review].'
+    description: |
+      Reporter of reviewdog command [github-pr-check,github-pr-review].
+      Default is github-pr-check.
+      github-pr-review can use Markdown and add a link to rule page in reviewdog reports.
     default: 'github-pr-check'
-  ### Flags for <linter-name> ###
-  locale:
-    description: '-locale flag of misspell. (US/UK)'
-    default: ''
+  xo_flgs:
+    description: "flags and args of xo command. Default: '.'"
+    default: '.'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-
-# Ref: https://haya14busa.github.io/github-action-brandings/
-# TODO: update branding if you want.
 branding:
-  icon: 'check'
+  icon: 'alert-octagon'
   color: 'blue'

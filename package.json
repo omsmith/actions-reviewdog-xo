@@ -1,0 +1,17 @@
+{
+  "name": "actions-reviewdog-xo",
+  "version": "1.0.0",
+  "author": "Owen Smith <owen@omsmith.ca>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omsmith/actions-reviewdog-xo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/omsmith/actions-reviewdog-xo/issues"
+  },
+  "homepage": "https://github.com/omsmith/actions-reviewdog-xo#readme",
+  "devDependencies": {
+    "xo": "^0.29.1"
+  }
+}
