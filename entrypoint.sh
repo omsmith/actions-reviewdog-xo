@@ -17,6 +17,8 @@ fi
 
 $(npm bin)/xo --version
 
+$(npm bin)/xo
+
 if [ "${INPUT_REPORTER}" == 'github-pr-review' ]; then
   # Use jq and github-pr-review reporter to format result to include link to rule page.
   $(npm bin)/xo --format json ${INPUT_XO_FLAGS:-'.'} \
